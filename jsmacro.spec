@@ -8,7 +8,7 @@ Group:		Development/Languages/Python
 # GIT_DIR=jsmacro/.git/ git archive --format=tar --prefix=jsmacro/  94014f4370bd70afdf1bf80d3ac3f215e130c155 | gzip > jsmacro.tgz
 #Source0:	https://github.com/smartt/jsmacro/tarball/master#/%{name}-%{version}.tgz
 Source0:	%{name}.tgz
-# Source0-md5:	3df081110299ec7b4254b62249fc0229
+# Source0-md5:	d47fc52b845e7f81a3587881880d7bdd
 URL:		http://www.eriksmartt.com/blog/archives/tag/jsmacro
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires:	python-hashlib
