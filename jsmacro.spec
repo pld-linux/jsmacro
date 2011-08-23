@@ -1,17 +1,15 @@
 Summary:	jsmacro - an oddly named JavaScript preprocessor
 Name:		jsmacro
-Version:	0.2.11
+Version:	0.2.11.1
 Release:	1
 License:	MIT
 Group:		Development/Languages/Python
-# git clone git://github.com/smartt/jsmacro.git
-# GIT_DIR=jsmacro/.git/ git archive --format=tar --prefix=jsmacro/  94014f4370bd70afdf1bf80d3ac3f215e130c155 | gzip > jsmacro.tgz
 #Source0:	https://github.com/smartt/jsmacro/tarball/master#/%{name}-%{version}.tgz
-Source0:	%{name}.tgz
-# Source0-md5:	d47fc52b845e7f81a3587881880d7bdd
+Source0:	https://github.com/glensc/jsmacro/tarball/%{version}#/%{name}-%{version}.tgz
+# Source0-md5:	dcd900017da95349f2030cd8e1717c36
 URL:		http://www.eriksmartt.com/blog/archives/tag/jsmacro
 BuildRequires:	rpmbuild(macros) >= 1.219
-Requires:	python-hashlib
+Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,7 +20,8 @@ This tool was developed to meet a desire to strip Debug and Test code
 from production JavaScript files in an automated manner.
 
 %prep
-%setup -qn %{name}
+%setup -qc
+mv *-%{name}-*/* .
 
 # fix #!%{_bindir}/env python -> #!%{__python}:
 %{__sed} -i -e '1s,^#!.*python,#!%{__python},' %{name}.py
