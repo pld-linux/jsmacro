@@ -1,7 +1,7 @@
 Summary:	jsmacro - an oddly named JavaScript preprocessor
 Name:		jsmacro
 Version:	0.2.11.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/Python
 #Source0:	https://github.com/smartt/jsmacro/tarball/master#/%{name}-%{version}.tgz
